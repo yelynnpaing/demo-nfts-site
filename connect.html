@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFTs-Collection</title>
+    <link rel="icon" href="NFT-images/shopping-cart.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light position-fixed w-100 fixed-top py-4 navBar animate__animated ">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <!-- <img src="NFT-images/favicon.png" alt="" class="favicon"> -->
+            <div class="d-flex align-items-center">
+                <i class="bi bi-cart-dash-fill text-danger fw-bold fs-1 mb-2"></i>
+                <h4 class="fw-bold text-muted ps-1">Cartzilla</h4>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="dropdown nav-item">
+                    <a class="nav-link fw-bold" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="dropdown nav-item" id="catalog">
+                    <a class="nav-link fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Catalog
+                    </a>
+                        <ul class="dropdown-menu" id="catalog-items">
+                            <li><a class="dropdown-item" href="#">Catalog v.1</a></li>
+                            <li><a class="dropdown-item" href="#">Catalog v.2</a></li>
+                            <li><a class="dropdown-item" href="#">Single item - Auction live</a></li>
+                            <li><a class="dropdown-item" href="#">Single item - Auction ended</a></li>
+                            <li><a class="dropdown-item" href="#">Single item - Buy now</a></li>
+                            <li><a class="dropdown-item" href="#">Vendor page</a></li>
+                            <li><a class="dropdown-item" href="#">Connect wallet</a></li>
+                            <li><a class="dropdown-item" href="#">Create items</a></li>
+                        </ul>
+                </li>
+                <li class="dropdown nav-item" id="account">
+                    <a class="nav-link fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu" id="profile-items">
+                        <li><a class="dropdown-item" href="#">Profile setting</a></li>
+                        <li><a class="dropdown-item" href="#">My items</a></li>
+                        <li><a class="dropdown-item" href="#">My collections</a></li>
+                        <li><a class="dropdown-item" href="#">Favourite</a></li>
+                        <li><a class="dropdown-item" href="#">Notifications</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" href="#">Back to main Demo</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center ms-auto">
+                <div class="nav-link-cus fw-bold search" id="search">
+                    <a href="#" class="text-decoration-none">
+                        <i class="bi bi-search" style="font-size: 1.2rem" data-bs-toggle="tooltip"
+                         data-bs-placement="top" data-bs-title="Search"></i>
+                    </a>
+                </div>
+                <div class="nav-link-cus fw-bold">
+                    <a href="#" class="text-decoration-none">
+                        <i class="bi bi-person" style="font-size: 1.5rem" data-bs-toggle="tooltip" 
+                        data-bs-placement="top" data-bs-title="Account" data-bs-target="reg-modal"></i>
+                    </a>
+                </div>
+                <div class="nav-link-custom">
+                    <a href="#" class="btn btn-primary">
+                        connect wallet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section>
+    <div class="row d-block w-100" style="height: 150px;" id="topMargin">
+        <div class="col"></div>
+    </div>
+</section>
+<section class="container">
+    <div class="row" id="showSearch">
+        <div class="col-lg-12"></div>
+        <div class="col-lg-12">
+            <div class="input-group animate__animated searchResult d-none" id="searchResult">
+                <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                <input type="text" style="padding-left: 45px; background-color: #f0f2f5;" class="form-control-lg rounded-start w-100 border-0 shadow" id="searchText">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid slide-Down navbarTouch" id="navBreadcrumb">
+    <div class="row align-items-center">
+        <div class="col-lg-12">
+           <div class="container">
+               <div class="row py-5">
+                   <div class="col-lg-12">
+                       <div class="">
+                           <nav style="--bs-breadcrumb-divider: '>'; " aria-label="breadcrumb">
+                               <ol class="breadcrumb d-flex align-items-center mb-0">
+                                   <li>
+                                       <h3 class="fw-bold text-white mb-0">Connect Wallet</h3>
+                                   </li>
+                                    <li class="ms-auto">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white"><i class="bi bi-house me-1 text-white"></i>Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page"><a href="catalog.html" class="text-decoration-none text-white">NFTs marketplace</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page"><a href="connect.html" class="text-decoration-none text-white">connect wallet</a></li>
+                                        </ol>
+                                    </li>
+                               </ol>
+                           </nav>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</section>
+<section class="container" id="walletCardGallery">
+    <div class="row justify-content-between mb-5 min-vh-100">
+        <div class="col-lg-12 ">
+           <div class="mt-5 mb-4 slide-Down">
+               <p>Choose the most suitable blockchain wallet for your needs</p>
+               <a href="#" class="fw-bold">Learn more about wallets</a>
+           </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/metamask.svg" alt="" class="">
+                        <span class="btn btn-sm btn-success">popular</span>
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Meta Mask</a></h4>
+                        <p class="card-text">MetaMask provides an essential utility for blockchain newcomers, token traders, crypto gamers and developers , token traders, crypto developers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/coinbase.svg" alt="" class="">
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Coinbase Wallet</a></h4>
+                        <p class="card-text">Coinbase Wallet is your passport to the decentralized web. Harness the power of DeFi to earn yield, grow your NFT collection, and much more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/walletconnect.svg" alt="" class="">
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Wallet Connect</a></h4>
+                        <p class="card-text">WalletConnect is the web3 standard to connect blockchain wallets to dapps. Hundreds of dapp’s use WalletConnect to connect with wallets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/fortmatic.svg" alt="" class="">
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Formatic</a></h4>
+                        <p class="card-text">Fortmatic is SOC 2 Type 1 compliant with a non-custodial HSM architecture. Fortmatic is a collaborative effort from the best.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/portis.svg" alt="" class="">
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Portis</a></h4>
+                        <p class="card-text">Portis is non-sustodial blockchain wallet that makes apps simple for everyone. Boost conversions by accepting cards worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-8 slide-Down">
+            <div class="card border-0 shadow wallet-card w-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <img src="NFT-images/torus.svg" alt="" class="">
+                    </div>
+                    <div class="">
+                        <h4 class="card-title mb-3"><a href="#" class="text-decoration-none fw-bold">Torus</a></h4>
+                        <p class="card-text">Torus is built and designed to be trustless, users' identities are not controlled by any central authority. One-click login for Web 3.0.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="container-fluid d-lg-block d-md-none" id="footer">
+    <div class="row footer-row p-5 mt-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between slide-Down">
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <h5 class="text-white">Stay Informed</h5>
+                        <div class="input-group mt-4 mb-1 d-flex w-75">
+                            <i class="bi bi-envelope position-relative top-50 start-0 input-group-text bg-white"></i>
+                            <input type="email" name="EMAIL" class="form-control border-0" placeholder="Your Email" required>
+                            <a href="#" class="btn btn btn-primary">Subscribe <sup>*</sup></a>
+                        </div>
+                        <small class="text-white-50"><sup>*</sup>Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+                        <div class="mt-5">
+                            <a href="https://twitter.com" class="btn btn-sm btn-outline-secondary twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://facebook.com" class="btn btn-sm btn-outline-secondary facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" class="btn btn-sm btn-outline-secondary instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://pinterest.com" class="btn btn-sm btn-outline-secondary pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="https://youtube.com" class="btn btn-sm btn-outline-secondary youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-Down">
+                            <h5 class="text-white fw-bold">Company</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>About Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>How it Works</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Create an NFT with Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Support</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Blog</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>My Account</small></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-Down">
+                            <h5 class="text-white fw-bold">Marketplace</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>All NFTs</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>New</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Art</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Music</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Photography</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Utility</small></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column h-100 slide-Down">
+                            <h5 class="text-white fw-bold">Help</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>Terms and Conditions</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Privacy Policy</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>FAQ</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="container-fluid d-lg-none d-md-block slide-Down" id="footerPh">
+    <div class="row footer-row p-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-4 col-md-5 col-sm-6 slide-Down">
+                        <h5 class="text-white">Stay Informed</h5>
+                        <div class="input-group mt-4 mb-1 d-flex">
+                            <i class="bi bi-envelope position-relative top-50 start-0 input-group-text bg-white"></i>
+                            <input type="email" name="EMAIL" class="form-control border-0" placeholder="Your Email" required>
+                            <a href="#" class="btn btn btn-primary">Subscribe <sup>*</sup></a>
+                        </div>
+                        <small class="text-white-50"><sup>*</sup>Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+                        <div class="mt-5">
+                            <a href="https://twitter.com" class="btn btn-sm btn-outline-secondary twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://facebook.com" class="btn btn-sm btn-outline-secondary facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" class="btn btn-sm btn-outline-secondary instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://pinterest.com" class="btn btn-sm btn-outline-secondary pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="https://youtube.com" class="btn btn-sm btn-outline-secondary youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-Down">
+                            <h5 class="text-white fw-bold">Company</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>About Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>How it Works</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Create an NFT with Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Support</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Blog</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>My Account</small></a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-between mt-5">
+                        <div class="col-lg-2 col-md-5 col-sm-6">
+                            <div class="d-flex flex-column justify-content-between h-100 slide-Down">
+                                <h5 class="text-white fw-bold">Marketplace</h5>
+                                <a href="#" class="text-decoration-none text-white"><small>All NFTs</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>New</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Art</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Music</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Photography</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Utility</small></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-5 col-sm-6">
+                            <div class="d-flex flex-column h-100" style="padding-left: 10px slide-Down">
+                                <h5 class="text-white fw-bold">Help</h5>
+                                <a href="#" class="text-decoration-none text-white"><small>Terms and Conditions</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Privacy Policy</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>FAQ</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="container-fluid" id="footer-last">
+    <div class="row footer-last-row p-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-5">
+                        <small class="text-white-50"> © Datas from bootsrap Themes. Made by <a href="#" class="text-decoration-none">Createx ylp</a></small>
+                    </div>
+                    <div class="col-lg-3 appIcon">
+                        <div class="d-flex">
+                            <a href="#" class="text-decoration-none rounded-3"><img src="NFT-images/playstore.png" alt="" class="w-100 d-block"></a>
+                            <a href="#" class="text-decoration-none rounded-3 ms-2"><img src="NFT-images/apple.png" alt="" class="w-100 d-block"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<section class="container">
+    <div class="row">
+        <div class="col">
+            <a href="#showSearch" id="scrollToTop" class="scrollToTop p-3 d-none rounded-2 position-fixed animate__animated" style="background-color: #61039a; right: 50px; bottom: 70px">
+                <i class="bi bi-chevron-double-up text-white"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="node_modules/typed.js/dist/typed.umd.js"></script>
+<script src="js/connect.js"></script>
+</body>
+</html>

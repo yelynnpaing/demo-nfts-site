@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFTs-Collection</title>
+    <link rel="icon" href="NFT-images/shopping-cart.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light position-fixed w-100 fixed-top py-4 navBar animate__animated ">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <!-- <img src="NFT-images/favicon.png" alt="" class="favicon"> -->
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-cart-dash-fill text-danger fw-bold fs-1 mb-2"></i>
+                                <h4 class="fw-bold text-muted ps-1">Cartzilla</h4>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2">
+                                <li class="dropdown nav-item">
+                                    <a class="nav-link fw-bold" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="dropdown nav-item" id="catalog">
+                                    <a class="nav-link fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Catalog
+                                    </a>
+                                   <ul class="dropdown-menu" id="catalog-items">
+                                       <li><a class="dropdown-item" href="#">Catalog v.1</a></li>
+                                       <li><a class="dropdown-item" href="#">Catalog v.2</a></li>
+                                       <li><a class="dropdown-item" href="#">Single item - Auction live</a></li>
+                                       <li><a class="dropdown-item" href="#">Single item - Auction ended</a></li>
+                                       <li><a class="dropdown-item" href="#">Single item - Buy now</a></li>
+                                       <li><a class="dropdown-item" href="#">Vendor page</a></li>
+                                       <li><a class="dropdown-item" href="#">Connect wallet</a></li>
+                                       <li><a class="dropdown-item" href="#">Create items</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown nav-item" id="account">
+                                    <a class="nav-link fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Account
+                                    </a>
+                                    <ul class="dropdown-menu" id="profile-items">
+                                        <li><a class="dropdown-item" href="#">Profile setting</a></li>
+                                        <li><a class="dropdown-item" href="#">My items</a></li>
+                                        <li><a class="dropdown-item" href="#">My collections</a></li>
+                                        <li><a class="dropdown-item" href="#">Favourite</a></li>
+                                        <li><a class="dropdown-item" href="#">Notifications</a></li>
+                                    </ul>
+                                </li>
+                
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link" href="#">Back to main Demo</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center ms-auto">
+                                <div class="nav-link-cus fw-bold search" id="search">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="bi bi-search" style="font-size: 1.2rem" data-bs-toggle="tooltip"
+                                         data-bs-placement="top" data-bs-title="Search"></i>
+                                    </a>
+                                </div>
+                                <div class="nav-link-cus fw-bold">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="bi bi-person" style="font-size: 1.5rem" data-bs-toggle="tooltip" 
+                                        data-bs-placement="top" data-bs-title="Account" data-bs-target="reg-modal"></i>
+                                    </a>
+                                </div>
+                                <div class="nav-link-custom">
+                                    <a href="connect.html" class="btn btn-primary connectWallet">
+                                        connect wallet
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+</section>
+<section class="container" style="margin-top: 130px;">
+    <div class="row" id="showSearch">
+        <div class="col-lg-12"></div>
+        <div class="col-lg-12">
+            <div class="input-group animate__animated searchResult d-none" id="searchResult">
+                <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                    <input type="text" style="padding-left: 45px; background-color: #f0f2f5;" 
+                    class="form-control-lg rounded-start w-100 border-0 shadow" id="searchText">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid slide-Down" id="navBreadcrumb">
+    <div class="row align-items-center pb-5">
+        <div class="col-lg-12">
+            <div class="container bread-crumb-container">
+                <div class="row py-5">
+                    <div class="col-lg-12 pb-5">
+                        <div class="">
+                            <nav style="--bs-breadcrumb-divider: '>'; " aria-label="breadcrumb">
+                                <ol class="breadcrumb d-flex align-items-center mb-0">
+                                    <li>
+                                        <h3 class="fw-bold text-white mb-0">Catalog V.1</h3>
+                                    </li>
+                                    <li class="ms-auto">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white"><i class="bi bi-house me-1 text-white"></i>Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page"><a href="#" class="text-decoration-none text-white">NFTs marketplace</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page"><a href="connect.html" class="text-decoration-none text-white">connect wallet</a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container " id="filter">
+    <div class="row bg-light px-4 pb-5 pt-5 mb-5 rounded ">
+        <div class="col-lg-2 col-md-11 col-sm-11 mb-2">
+            <a href="#" class="btn btn-secondary px-4 py-2 border" id="show-filter"><i class="bi bi-funnel">Filter <i class="bi bi-caret-down-fill"></i></i></a>
+        </div>
+        <div class="col-lg-7 col-md-10 col-sm-11 mb-2">
+            <div class="d-flex border rounded">
+                <div class="input-group d-inline-block">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-4"></i>
+                    <input type="text" class="border-0 py-2 ps-4 w-100 form-control" id="catalogSearchText" placeholder="'Search Collection title or User .....">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-11 col-sm-11 me-0 mb-2">
+            <div class="d-flex align-items-center ">
+                <label for="">Sort By :</label>
+               <div class="ms-3 border rounded">
+                   <a href="#" class="btn btn-secondary">
+                       Newest
+                       <i class="bi bi-chevron-compact-down ps-5"></i>
+                   </a>
+               </div>
+            </div>
+        </div>
+        <div class="row my-5 filter-detail animate__animated d-none">
+            <div class="col-lg-4 col-md-10 col-sm-11">
+                <div class="bg-white rounded p-4 border">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox1">
+                            <label for="checkBox1" class="form-check-label">All artworks</label>
+                        </div>
+                        <span><small>498</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox2">
+                            <label for="checkBox2" class="form-check-label">Premium</label>
+                        </div>
+                        <span><small>25</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox3">
+                            <label for="checkBox3" class="form-check-label">Art</label>
+                        </div>
+                        <span><small>112</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox4">
+                            <label for="checkBox4" class="form-check-label">Photography</label>
+                        </div>
+                        <span><small>93</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox5">
+                            <label for="checkBox5" class="form-check-label">Music</label>
+                        </div>
+                        <span><small>48</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox6">
+                            <label for="checkBox6" class="form-check-label">Gaming</label>
+                        </div>
+                        <span><small>82</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox7">
+                            <label for="checkBox7" class="form-check-label">Sports</label>
+                        </div>
+                        <span><small>52</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox8">
+                            <label for="checkBox8" class="form-check-label">Collectons</label>
+                        </div>
+                        <span><small>11</small></span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkBox9">
+                            <label for="checkBox9" class="form-check-label">Utility</label>
+                        </div>
+                        <span><small>24</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-10 col-sm-11">
+                <div class="">
+                    <div class="bg-white border rounded p-4">
+                        <h5 class="fw-bold mb-3">Sale Types</h5>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkBox10">
+                            <label for="checkBox10" class="form-check-label">Fixed Price</label>
+                        </div>
+                        <div class="form-check mt-1">
+                            <input type="checkbox" class="form-check-input" id="checkBox11">
+                            <label for="checkBox11" class="form-check-label">Live auction</label>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded p-4 mt-4">
+                        <h5 class="fw-bold mb-3">Blockchain</h5>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkBox12">
+                            <label for="checkBox12" class="form-check-label">ETH</label>
+                        </div>
+                        <div class="form-check mt-1">
+                            <input type="checkbox" class="form-check-input" id="checkBox13">
+                            <label for="checkBox13" class="form-check-label">BNB</label>
+                        </div>
+                        <div class="form-check mt-1">
+                            <input type="checkbox" class="form-check-input" id="checkBox14">
+                            <label for="checkBox14" class="form-check-label">BUSD</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-10 col-sm-11">
+                <div class="">
+                    <div class="bg-white border rounded p-4">
+                        <h5 class="fw-bold mb-3">Price range</h5>
+                        <div class="form-check ps-0 d-flex">
+                            <input type="range" class="form-range" min="1" max="15" step="1">
+                            <input type="range" class="form-range position-relative" min="16" max="30" step="1" style="margin-left: -15px;">
+                        </div>
+                        <div class="d-flex">
+                            <div class="border-start line">
+                                <div class="invisible">border</div>
+                            </div>
+                            <div class="border-start line"></div>
+                            <div class="border-start border-end line"></div>
+                            <div class="border-end line"></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="line">
+                                <span>1</span>
+                            </div>
+                            <span class="line">8</span>
+                            <span class="line">15</span>
+                            <span class="line">23</span>
+                            <span class="text-end" style="margin-right: -10px;">30</span>
+                        </div>
+                        <div class="d-flex">
+                            <div class="input-group moneyType me-3">
+                                <div class="dropdown">
+                                    <a href="#aa" class="input-group-text text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">ETH</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="#a1" class="text-decoration-none">BNB</a></li>
+                                        <li class="dropdown-item"><a href="#a1" class="text-decoration-none">BUSD</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control">
+
+                            </div>
+                            <div class="input-group moneyType">
+                                <div class="dropdown">
+                                    <a href="#aa" class="input-group-text text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">ETH</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="#a1" class="text-decoration-none">BNB</a></li>
+                                        <li class="dropdown-item"><a href="#a1" class="text-decoration-none">BUSD</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-11">
+
+        </div>
+    </div>
+</section>
+<section class="container" id="nftItems">
+    <div class="row mb-5">
+        <div class="col-lg-12">
+            <div class="card-wrapper d-flex">
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-1.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">3D aesthetics with shapes</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.1568ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $595.76]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-1.png" alt="" style="width: 32px" class="me-1">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@foxnet_creator</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-2.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Ocen and Sky</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.5ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $2000.55]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-2.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@YunusKullebi</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-3.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Aesthetic art collage</p>
+                        <small class="d-block mb-2 card-text text-black-50">Reserve Price</small>
+                        <p class="card-text d-inline mb-0">0.6ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $2400.65]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-3.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@lulucollagas</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-4.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Astronaut surrounded by lights</p>
+                        <small class="d-block mb-2 card-text text-black-50">Reserve price</small>
+                        <p class="card-text d-inline mb-0">0.1ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $400.19]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-4.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@DistroKid</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper d-flex">
+                <div class="card border-0 shadow w-100 slide-left">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/trending1.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-2 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white" id="">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <a href="#" class="card-text mt-1 text-decoration-none mb-3 d-block">Aesthetic art collage</a>
+                        <small class="d-block mb-2 card-text text-black-50">Reserve price:</small>
+                        <p class="card-text d-inline mb-0">0.6 ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [~ $ 2,400.65]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#" class="">
+                                <img src="NFT-images/t-1.png" alt="" style="width: 32px" class="me-2">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <small class="card-text">@Sharan_Pagdala</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100 slide-left">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/trending2.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <a href="#" class="card-text mt-1 text-decoration-none mb-3 d-block">Ocen and sky</a>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid:</small>
+                        <p class="card-text d-inline mb-0">0.5 ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [~ $ 2,000.55]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#" class="">
+                                <img src="NFT-images/t-2.png" alt="" style="width: 32px" class="me-2">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <small class="card-text">@Simonlee</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100 slide-left">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/trending3.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <a href="#" class="card-text mt-1 text-decoration-none mb-3 d-block">Aesthetic art collage</a>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid:</small>
+                        <p class="card-text d-inline mb-0">0.156 ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [~ $ 595.76]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#" class="">
+                                <img src="NFT-images/t-3.png" alt="" style="width: 32px" class="me-2">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <small class="card-text">@Subham_Dhage</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100 slide-left">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/trending4.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-2 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <a href="#" class="card-text mt-1 text-decoration-none mb-3 d-block">Aesthetic art collage</a>
+                        <small class="d-block mb-2 card-text text-black-50">Reserve price:</small>
+                        <p class="card-text d-inline mb-0">0.1 ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [~ $ 400.19]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#" class="">
+                                <img src="NFT-images/t-4.png" alt="" style="width: 32px" class="me-2">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <small class="card-text">@DistroKid</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper d-flex">
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-5.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">3D aesthetics with shapes</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.1568ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $595.76]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-5.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@Subhan_Dhage</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-6.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Ocen and sky</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.5ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $2000.55]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-6.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@MihailGreen</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-7.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded d-none">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="d-inline text-white">20:12:39</small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Aesthetic art collage</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.6ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $2400.65]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-7.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@lulucollages</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow w-100">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <a href="#" class="d-block">
+                            <img src="NFT-images/recentdrop-8.jpg" alt="" class="card-img img-fluid">
+                        </a>
+                        <div class="bg-dark m-3 position-absolute top-0 start-0 p-1 rounded count-down-area">
+                            <div class="me-1 d-inline">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <small class="count-down d-inline text-white"></small>
+                        </div>
+                        <button class="bg-light m-3 position-absolute top-0 end-0 p-2 card-icon-bg">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-body border-0">
+                        <p class="card-text mt-1">Astronaut surrounded by lights</p>
+                        <small class="d-block mb-2 card-text text-black-50">Current bid</small>
+                        <p class="card-text d-inline mb-0">0.1568ETH</p>
+                        <small class="card-text d-inline text-black-50"><i class=""></i> [ ~ $400.19]</small>
+                    </div>
+                    <div class="card-footer border-0 py-0">
+                        <div class="d-flex align-items-center py-3 mb-1 border-top">
+                            <a href="#">
+                                <img src="NFT-images/rd-8.png" alt="" style="width: 32px">
+                            </a>
+                            <a href="#" class="text-decoration-none ms-2">
+                                <small class="card-text">@Sharan_Pagadala</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="shadow my-3">
+            <div class="peginate d-flex flex-wrap align-items-center mb-5">
+                <div class="peginate-number text-center mx-auto">
+                    <button class="btn btn-sm-primary px-3 py-2 bg-primary pg-one">
+                        <a href="" class="text-white text-decoration-none">1</a>
+                    </button>
+                    <button class="btn btn-sm-primary px-3 py-2 bg-white pg-one shadow">
+                        <a href="" class="text-primary text-decoration-none">2</a>
+                    </button>
+                    <button class="btn btn-sm-primary px-3 py-2 bg-white pg-one shadow">
+                        <a href="" class="text-primary text-decoration-none">3</a>
+                    </button>
+                    <button class="btn btn-sm-primary px-3 py-2 bg-white pg-one shadow">
+                        <a href="" class="text-primary text-decoration-none">4</a>
+                    </button>
+                    <button class="btn btn-sm-primary px-3 py-2 bg-white pg-one shadow">
+                        <a href="" class="text-primary text-decoration-none">5</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container" id="nft-journey">
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-12">
+            <h2 class="fw-bold text-center">Begin your NFT journey with us!</h2>
+        </div>
+        <div class="col-lg-12 d-lg-block d-md-none" id="nftJourneyIndicator">
+            <div class="mt-5 mb-5 mx-o d-flex ">
+                <div class="col-lg-3">
+                    <div class="me-3 slide-Down">
+                        <img src="NFT-images/wallet.svg" alt="">
+                        <h5 class="fw-bold mt-4">Set up your wallet</h5>
+                        <p class="text-muted mb-0">
+                            Quam nulla in id nibh. Morbi eget eget dui est pretium, blandit penatibus blandit.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="me-3 slide-Down">
+                        <img src="NFT-images/image.svg" alt="">
+                        <h5 class="fw-bold mt-4">Create your collection</h5>
+                        <p class="text-muted mb-0">
+                            Fringilla ullamcorper aenean tellus ullamcorper neque, malesuada. Aliquam elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="me-3 slide-Down">
+                        <img src="NFT-images/add.svg" alt="">
+                        <h5 class="fw-bold mt-4">Add your NFTs</h5>
+                        <p class="text-muted mb-0">
+                            Platea eu aliquam pellentesque parturient. Volutpat, fermentum suspendisse at nisi cras.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="slide-Down">
+                        <img src="NFT-images/shopping-cart.svg" alt="">
+                        <h5 class="fw-bold mt-4">List theme for sale</h5>
+                        <p class="text-muted mb-0">
+                            In eget nulla id placerat sapien Sed malesuada. Sed id risus non accumsan eu amet ut.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 d-lg-none d-sm-block mt-3 mb-5">
+            <div id="nftJourneyIndicatorPh" class="carousel slide slide-Down" data-bs-ride="true">
+                <div class="carousel-indicators topCreatorIndicatorPhIcon">
+                    <button type="button" data-bs-target="#nftJourneyIndicatorPh" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#nftJourneyIndicatorPh" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#nftJourneyIndicatorPh" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#nftJourneyIndicatorPh" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="col-lg-12">
+                            <div class="me-3">
+                                <img src="NFT-images/wallet.svg" alt="">
+                                <h5 class="fw-bold mt-4">Set up your wallet</h5>
+                                <p class="text-muted mb-0">
+                                    Quam nulla in id nibh. Morbi eget elit eget dui est pretium, blandit penatibus blandit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="col-lg-12">
+                            <div class="me-3">
+                                <img src="NFT-images/image.svg" alt="">
+                                <h5 class="fw-bold mt-4">Create your collection</h5>
+                                <p class="text-muted mb-0">
+                                    Fringilla ullamcorper aenean tellus ullamcorper neque, malesuada. Aliquam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-12">
+                            <div class="me-3">
+                                <img src="NFT-images/add.svg" alt="">
+                                <h5 class="fw-bold mt-4">Add your NFTs</h5>
+                                <p class="text-muted mb-0">
+                                    Platea eu aliquam pellentesque parturient. Volutpat, fermentum suspendisse at nisi cras.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-12">
+                            <div class="me-3">
+                                <img src="NFT-images/shopping-cart.svg" alt="">
+                                <h5 class="fw-bold mt-4">List theme for sale</h5>
+                                <p class="text-muted mb-0">
+                                    In eget nulla id placerat sapien Sed malesuada. id risus non accumsan eu amet ut.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container rounded-3 shadow slide-Down" id="subscribe" style="background-color: #efefef;">
+    <div class="row subscribe-row p-5 justify-content-center align-items-center">
+        <div class="col-lg-12 col-md-12 col-11 subscribe-card">
+            <h2 class="fw-bold mb-0">Never miss a drop!</h2>
+            <p class="mb-0 subscribe-text">Subscribe to our ultra-exclusive drop list and be the first to know about upcoming drops.</p>
+            <div class="input-group mt-4 mb-1 d-flex w-75">
+                <i class="bi bi-envelope position-relative top-50 start-0 input-group-text bg-white"></i>
+                <input type="email" name="EMAIL" class="form-control border-0" placeholder="Your Email" required>
+                <a href="#" class="btn btn btn-primary">Subscribe <sup>*</sup></a>
+            </div>
+            <small class="d-block"><sup>*</sup>Receive early discount offers, updates and new products info.</small>
+        </div>
+    </div>
+</section>
+<footer class="container-fluid d-lg-block d-md-none p-5" id="footer">
+    <div class="row footer-row p-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-5 col-md-5 col-sm-6 slide-left">
+                        <h5 class="text-white">Stay Informed</h5>
+                        <div class="input-group mt-4 mb-1 d-flex w-75">
+                            <i class="bi bi-envelope position-relative top-50 start-0 input-group-text bg-white"></i>
+                            <input type="email" name="EMAIL" class="form-control border-0" placeholder="Your Email" required>
+                            <a href="#" class="btn btn btn-primary">Subscribe <sup>*</sup></a>
+                        </div>
+                        <small class="text-white-50"><sup>*</sup>Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+                        <div class="mt-5">
+                            <a href="https://twitter.com" class="btn btn-sm btn-outline-secondary twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://facebook.com" class="btn btn-sm btn-outline-secondary facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" class="btn btn-sm btn-outline-secondary instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://pinterest.com" class="btn btn-sm btn-outline-secondary pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="https://youtube.com" class="btn btn-sm btn-outline-secondary youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-left">
+                            <h5 class="text-white fw-bold">Company</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>About Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>How it Works</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Create an NFT with Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Support</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Blog</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>My Account</small></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-left">
+                            <h5 class="text-white fw-bold">Marketplace</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>All NFTs</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>New</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Art</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Music</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Photography</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Utility</small></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column h-100 slide-left">
+                            <h5 class="text-white fw-bold">Help</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>Terms and Conditions</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Privacy Policy</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>FAQ</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="container-fluid d-lg-none d-md-block" id="footerPh">
+    <div class="row footer-row p-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-12 py-5 d-sm-none"></div>
+                    <div class="col-lg-12 py-5"></div>
+                    <div class="col-lg-4 col-md-5 col-sm-6 slide-left">
+                        <h5 class="text-white">Stay Informed</h5>
+                        <div class="input-group mt-4 mb-1 d-flex">
+                            <i class="bi bi-envelope position-relative top-50 start-0 input-group-text bg-white"></i>
+                            <input type="email" name="EMAIL" class="form-control border-0" placeholder="Your Email" required>
+                            <a href="#" class="btn btn btn-primary">Subscribe <sup>*</sup></a>
+                        </div>
+                        <small class="text-white-50"><sup>*</sup>Subscribe to our newsletter to receive early discount offers, 
+                            updates and new products info.
+                        </small>
+                        <div class="mt-5">
+                            <a href="https://twitter.com" class="btn btn-sm btn-outline-secondary twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://facebook.com" class="btn btn-sm btn-outline-secondary facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" class="btn btn-sm btn-outline-secondary instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://pinterest.com" class="btn btn-sm btn-outline-secondary pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="https://youtube.com" class="btn btn-sm btn-outline-secondary youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="d-flex flex-column justify-content-between h-100 slide-left mt-3">
+                            <h5 class="text-white fw-bold">Company</h5>
+                            <a href="#" class="text-decoration-none text-white"><small>About Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>How it Works</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Create an NFT with Us</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Support</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>Blog</small></a>
+                            <a href="#" class="text-decoration-none text-white"><small>My Account</small></a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-between mt-5 mb-3">
+                        <div class="col-lg-2 col-md-5 col-sm-6">
+                            <div class="d-flex flex-column justify-content-between h-100 slide-left">
+                                <h5 class="text-white fw-bold">Marketplace</h5>
+                                <a href="#" class="text-decoration-none text-white"><small>All NFTs</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>New</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Art</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Music</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Photography</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Utility</small></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-5 col-sm-6">
+                            <div class="d-flex flex-column h-100 slide-left" style="padding-left: 10px">
+                                <h5 class="text-white fw-bold">Help</h5>
+                                <a href="#" class="text-decoration-none text-white"><small>Terms and Conditions</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>Privacy Policy</small></a>
+                                <a href="#" class="text-decoration-none text-white"><small>FAQ</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="container-fluid" id="footer-last">
+    <div class="row footer-last-row p-5">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-5">
+                        <small class="text-white-50"> © Datas from bootsrap Themes. Made by <a href="#" class="text-decoration-none">Createx ylp</a></small>
+                    </div>
+                    <div class="col-lg-3 mt-3">
+                        <div class="d-flex">
+                            <a href="#" class="text-decoration-none rounded-3"><img src="NFT-images/playstore.png" alt="" class="w-100 d-block"></a>
+                            <a href="#" class="text-decoration-none rounded-3 ms-2"><img src="NFT-images/apple.png" alt="" class="w-100 d-block"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<section class="container scroll-top">
+    <div class="row">
+        <div class="col">
+            <a href="#showSearch" id="scrollToTop" class="scrollToTop p-3 d-inline-block rounded-2 position-fixed d-none animate__animated" style="background-color: #61039a; right: 50px; bottom: 70px">
+                <i class="bi bi-chevron-double-up text-white"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="node_modules/typed.js/dist/typed.umd.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

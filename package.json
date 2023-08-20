@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.1",
+    "bootstrap-icons": "^1.10.5",
+    "scrollreveal": "^4.0.9",
+    "typed.js": "^2.0.16",
+    "waypoints": "^4.0.1"
+  }
+}
